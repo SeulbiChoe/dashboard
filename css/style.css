@@ -1,0 +1,201 @@
+@charset "utf-8";
+.sidebar a {
+  width: 100%;
+  display: inline-block;
+  color: #fff;
+  padding: 15px 20px;
+}
+.sidebar a.active {
+  background-color: #f5f5f5;
+  color: #000;
+  border-radius: 100000px 0 0 100000px;;
+}
+/* 버튼 */
+.example {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.exam1 a {
+  width: 50%;
+  min-width: 75px;
+  background-color: #2c2c2cca;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.exam1 a.primary {
+  background-color: #26427ace;
+}
+.exam1 span {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+.exam2 {
+  flex-wrap: wrap;
+}
+.exam2 a {
+  width: calc(50% - 5px);
+  height: 75px;
+  /* background-color: #fffffff8; */
+  background-color: #f0f0f0; /* 위 컬러로로 변경 필수 */
+  display: flex;
+  flex-shrink: 0;
+}
+.exam2 .icon {
+  display: inline-block;
+  width: 25%;
+  min-width: 26px;
+  height: 100%;
+  background-color: #4e4e4e;
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.exam2 .link__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 5%;
+}
+.link__menu--en {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+.link__menu--ko {
+  color: #244c9c;
+  font-size: 15px;
+  font-weight: 500;
+}
+.exam3 {
+  flex-wrap: wrap;
+}
+.btn--secondary {
+  width: 100%;
+  background: #505050fc;
+  padding: 15px;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+.exam4 {
+  flex-wrap: wrap;
+}
+.exam4 button {
+  width: 100%;
+  background: #303641;
+  height: 50px;
+  font-size: 18px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.exam4 button:nth-child(2) {
+  background: #505050fc;
+}
+
+/* 인풋, 셀렉트 */
+.main__mail .main__inner-content > div {
+  margin-bottom: 20px;
+}
+.select-menu {
+  display: flex;
+  gap: 10px;
+}
+.select-menu select {
+  font-size: 15px;
+  height: 42px;
+  background-color: #eaf3fe;
+  border: none;
+}
+.select-menu .select-menu__date {
+  width: 70%;
+}
+.select-menu .select-menu__check {
+  width: 30%;
+}
+/* .member-info 클래스 */
+.input-group {
+  margin-bottom: 10px;
+}
+.input-group span {
+  width: 60px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px 0  0 6px;
+}
+.input-group ion-icon {
+  color: #333;
+  font-size: 18px;
+}
+.input-group > input, .input-group > select {
+  height: 46px;
+}
+.input-group .form-control {
+  color: #203344;
+  font-weight: 500;
+  font-size: 17px;
+}
+.input-group .form-control::placeholder {
+  color: #727272;
+}
+.input-group .form-phone::placeholder {
+  color: #203344;
+  font-size: 20px;
+  font-weight: 600;
+}
+.input-group .form-select:disabled {
+  background: LightGrey;
+}
+.select-active {
+  color: #000;
+  background-color: lightyellow;
+  font-size: 17px;
+  font-weight: 400;
+  height: 46px;
+}
+/* .mypage_M_deit 클래스 */
+.mypage_M_deit label {
+  width: 110px;
+  background-color: #c8d7ebba;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px 0 0 4px;
+  color: #555;
+}
+.mypage_M_deit input, .mypage_M_deit select {
+  color: #203344;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0px;
+  padding-left: 20px;
+  background-color: #f5f5f5;
+}
+/* 테이블 */
+.main__board-content .table {
+  min-width: 250px;
+  text-align: center;
+}
+.main__board-content .table td, .main__board-content .table th {
+  font-size: 14px;
+}
+.main__board-content .table-bg-active td {
+  color: #fff;
+    background-color: #0099FF;
+}

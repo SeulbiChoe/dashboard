@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>가로 막대 차트 + 값 표시</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+  .myChartDiv {
+    width: 400px;
+    height: 100%;
+  }
+  .chart-text {
+   display: flex;
+   gap: 10px;
+   justify-content: flex-end;
+   letter-spacing: -1px;
+  }
+  .chart-text:nth-child(2) span:first-child {
+   color: green;
+  }
+  .chart-text:nth-child(2) span:nth-child(2) {
+   color: orange;
+  }
+  .chart-text:nth-child(2) span:last-child {
+   color: red;
+  }
+</style>
+<body>
+  <div class="myChartDiv">
+    <canvas id="myChart" width="400" height="35"></canvas>
+    <div class="chart-text">
+     <p>점검: 12건</p>
+     <p>
+      <span>양호</span> / 
+      <span>권고</span> / <!-- 주황색 -->
+      <span>이상</span>
+     </p>
+    </div>
+  </div>
+
+  <script>
+                    const labels = [''];
+                    const greenData = [9];
+                    const orangeData = [3];
+                    const redData = [1];
+                    const myChart = new Chart(document.getElementById('myChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                        {
+                            label: '',
+                            data: greenData,
+                            backgroundColor: 'green',
+                            // stack: 'stack1',
+                        },
+                        {
+                            label: '',
+                            data: orangeData,
+                            backgroundColor: 'orange',
+                            // stack: 'stack1',
+                        },
+                        {
+                            label: '',
+                            data: redData,
+                            backgroundColor: 'red',
+                            // stack: 'stack1',
+                        },
+                        ]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        hover: {
+                            mode: null
+                        },
+                        plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: false },
+                        datalabels: {
+                            color: '#fff',
+                            font: { weight: 'bold', size: "15px" },
+                            formatter: (value) => value // ✅ 입력한 숫자 그대로 출력
+                        }
+                        },
+                        responsive: false,
+                        // maintainAspectRatio: false,
+                        scales: {
+                        x: { stacked: true, display: false },
+                        y: { stacked: true, display: false }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                    });
+  </script>
+</body>
+</html>
